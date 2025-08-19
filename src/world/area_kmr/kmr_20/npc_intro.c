@@ -195,6 +195,9 @@ s32* N(UnknownLists)[] = {
 
 EvtScript N(EVS_Scene_BeginGame) = {
     Call(DisablePlayerInput, TRUE)
+    Call(GotoMap, Ref("osr_02"), 0)
+    Wait(40)
+    Return
     Thread
         Wait(5 * DT)
         Call(SetMusicTrack, 0, SONG_MAIL_CALL, 0, 8)
